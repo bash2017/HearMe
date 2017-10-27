@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.swing.app.hearme.TranslateActivity">
+
+    <EditText
+        android:id="@+id/txtTranslateText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Yo quiero decir..."
+        android:inputType="textMultiLine"
+        android:lines="8"
+        android:maxLines="8"
+        android:minLines="8"
+        android:scrollbars="vertical"
+        android:gravity="top|left"/>
+
+    <Button
+        android:id="@+id/btnTranslateOk"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Traducir" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom">
+
+        <LinearLayout
+            android:id="@+id/llTranslateImages"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+        </LinearLayout>
+    </HorizontalScrollView>
+</LinearLayout>

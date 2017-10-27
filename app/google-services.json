@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "718046744464",
+    "firebase_url": "https://hearme-dafbf.firebaseio.com",
+    "project_id": "hearme-dafbf",
+    "storage_bucket": "hearme-dafbf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:718046744464:android:028bc3fc7b62cd62",
+        "android_client_info": {
+          "package_name": "com.swing.app.hearme"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "718046744464-hcdtlaqqiv0oudlfbnlghf96fbaca4he.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.swing.app.hearme",
+            "certificate_hash": "d82094624d8881588aa6a8beb0f5697c8af9269c"
+          }
+        },
+        {
+          "client_id": "718046744464-mibvtddftkifmabf6detlm9pb2567ank.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1OtXvkx6wIWxb78AQE5Gn1LNRHgqm2Jg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "718046744464-mibvtddftkifmabf6detlm9pb2567ank.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
