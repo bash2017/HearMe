@@ -19,6 +19,12 @@
         android:gravity="top|left"/>
 
     <Button
+        android:id="@+id/btnSpeechToText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Voz a texto"/>
+
+    <Button
         android:id="@+id/btnTranslateOk"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
