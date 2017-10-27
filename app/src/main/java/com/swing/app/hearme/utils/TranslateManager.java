@@ -50,7 +50,7 @@ public class TranslateManager {
     }
 
 
-    private Task executeTaskFinder(String world) {
+    private Task executeTaskFinder(final String world) {
         final TaskCompletionSource<ArrayList<ImageView>> dbSource = new TaskCompletionSource<>();
         Task dbTask = dbSource.getTask();
 
@@ -70,6 +70,11 @@ public class TranslateManager {
                                 imagesArray.add(newImage);
                             }
                             dbSource.setResult(imagesArray);
+                        }else{
+                            for (int i=0; i < world.length(); i++){
+
+                            }
+                            //String[] letters = world.getChars(2, 9, Str2, 0);
                         }
                     }
 
