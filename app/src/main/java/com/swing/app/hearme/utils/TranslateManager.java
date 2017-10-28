@@ -4,6 +4,7 @@ import android.content.Context;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -18,7 +19,6 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 import com.swing.app.hearme.R;
-import com.swing.app.hearme.views.SCustomView;
 
 import java.util.ArrayList;
 
@@ -46,11 +46,8 @@ public class TranslateManager {
                 public void onSuccess(ArrayList<View> arrayImages) {
                     if (arrayImages != null) {
                         for (int i = 0; i < arrayImages.size(); i++) {
-
-                            //ViewGroup insertPoint = (ViewGroup) findViewById(R.id.insert_point);
-                            //insertPoint.addView(v, 0, new ViewGroup.LayoutParams(ViewGroup.LayoutParams.FILL_PARENT, ViewGroup.LayoutParams.FILL_PARENT));
-                            //SCustomView custom = new SCustomView();
                             _llTranslatePics.addView(arrayImages.get(i));
+                            LayoutInflater inflater = LayoutInflater.from(_context);
                         }
                     }
                 }
@@ -71,25 +68,21 @@ public class TranslateManager {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
                         if (dataSnapshot.exists()) {
-                            LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(500, 600);
                             for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
-                                LayoutInflater vi = (LayoutInflater)_context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                                LayoutInflater vi = (LayoutInflater) _context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
                                 View v = vi.inflate(R.layout.scustom_view, null);
 
                                 TextView textView = (TextView) v.findViewById(R.id.txtCustomView);
                                 ImageView imageView = (ImageView) v.findViewById(R.id.imgCustomView);
 
-                                //ImageView newImage = new ImageView(_context);
                                 Picasso.with(_context).load(String.valueOf(postSnapshot.getValue())).into(imageView);
-                                //newImage.setLayoutParams(layoutParams);
+                                textView.setText(world);
+                                v.setLayoutParams(new LinearLayout.LayoutParams(
+                                        650,
+                                        650));
                                 imagesArray.add(v);
                             }
                             dbSource.setResult(imagesArray);
-                        }else{
-                            for (int i=0; i < world.length(); i++){
-
-                            }
-                            //String[] letters = world.getChars(2, 9, Str2, 0);
                         }
                     }
 
