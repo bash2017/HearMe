@@ -2,8 +2,11 @@ package com.swing.app.hearme.utils;
 
 import android.content.Context;
 import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
@@ -14,6 +17,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
+import com.swing.app.hearme.R;
+import com.swing.app.hearme.views.SCustomView;
 
 import java.util.ArrayList;
 
@@ -36,11 +41,15 @@ public class TranslateManager {
         String[] words = text.split(" ");
         for (String word : words) {
             Task dbTask = executeTaskFinder(word);
-            dbTask.addOnSuccessListener(new OnSuccessListener<ArrayList<ImageView>>() {
+            dbTask.addOnSuccessListener(new OnSuccessListener<ArrayList<View>>() {
                 @Override
-                public void onSuccess(ArrayList<ImageView> arrayImages) {
+                public void onSuccess(ArrayList<View> arrayImages) {
                     if (arrayImages != null) {
                         for (int i = 0; i < arrayImages.size(); i++) {
+
+                            //ViewGroup insertPoint = (ViewGroup) findViewById(R.id.insert_point);
+                            //insertPoint.addView(v, 0, new ViewGroup.LayoutParams(ViewGroup.LayoutParams.FILL_PARENT, ViewGroup.LayoutParams.FILL_PARENT));
+                            //SCustomView custom = new SCustomView();
                             _llTranslatePics.addView(arrayImages.get(i));
                         }
                     }
@@ -51,10 +60,10 @@ public class TranslateManager {
 
 
     private Task executeTaskFinder(final String world) {
-        final TaskCompletionSource<ArrayList<ImageView>> dbSource = new TaskCompletionSource<>();
+        final TaskCompletionSource<ArrayList<View>> dbSource = new TaskCompletionSource<>();
         Task dbTask = dbSource.getTask();
 
-        final ArrayList<ImageView> imagesArray = new ArrayList<>();
+        final ArrayList<View> imagesArray = new ArrayList<>();
         DatabaseReference fireData = mDataBase.child(world);
         try {
             if (fireData != null) {
@@ -64,10 +73,16 @@ public class TranslateManager {
                         if (dataSnapshot.exists()) {
                             LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(500, 600);
                             for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
-                                ImageView newImage = new ImageView(_context);
-                                Picasso.with(_context).load(String.valueOf(postSnapshot.getValue())).into(newImage);
-                                newImage.setLayoutParams(layoutParams);
-                                imagesArray.add(newImage);
+                                LayoutInflater vi = (LayoutInflater)_context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                                View v = vi.inflate(R.layout.scustom_view, null);
+
+                                TextView textView = (TextView) v.findViewById(R.id.txtCustomView);
+                                ImageView imageView = (ImageView) v.findViewById(R.id.imgCustomView);
+
+                                //ImageView newImage = new ImageView(_context);
+                                Picasso.with(_context).load(String.valueOf(postSnapshot.getValue())).into(imageView);
+                                //newImage.setLayoutParams(layoutParams);
+                                imagesArray.add(v);
                             }
                             dbSource.setResult(imagesArray);
                         }else{

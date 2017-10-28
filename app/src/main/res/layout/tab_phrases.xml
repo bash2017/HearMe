@@ -3,126 +3,113 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="10dp"
     android:orientation="vertical"
     tools:context="com.swing.app.hearme.PhrasesActivity">
 
-    <LinearLayout
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Frases Típicas"
+        android:textSize="28sp"
+        android:gravity="center"/>
+
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.50"
-        android:orientation="vertical">
+        android:layout_weight="0.4"
+        android:paddingBottom="10dp">
 
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:textSize="28sp"
-            android:text="Frases Típicas" />
+            android:orientation="vertical">
 
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <LinearLayout
+            <Button
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:layout_height="wrap_content"
+                android:onClick="imageClick"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="Hola, ¿Cómo estas?"
+                android:textSize="18sp" />
 
-                <Button
-                    android:id="@+id/btnPhr1Tab"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="18sp"
-                    android:text="Hola, ¿Cómo estas?"
-                    android:paddingTop="20dp"
-                    android:paddingBottom="20dp"
-                    android:onClick="imageClick"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="imageClick"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="Adios, nos vemos luego"
+                android:textSize="18sp" />
 
-                <Button
-                    android:id="@+id/btnPhr2Tab"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="18sp"
-                    android:text="Adios, nos vemos luego"
-                    android:paddingTop="20dp"
-                    android:paddingBottom="20dp"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="imageClick"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="¿Cómo te ha ido en el día?"
+                android:textSize="18sp" />
 
-                <Button
-                    android:id="@+id/btnPhr3Tab"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="18sp"
-                    android:text="¿Cómo te ha ido en el día?"
-                    android:paddingTop="20dp"
-                    android:paddingBottom="20dp"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="imageClick"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="Buenas tardes"
+                android:textSize="18sp" />
 
-                <Button
-                    android:id="@+id/btnPhr4Tab"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="18sp"
-                    android:text="Buenas tardes"
-                    android:paddingTop="20dp"
-                    android:paddingBottom="20dp"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="imageClick"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="Buenas noches"
+                android:textSize="18sp" />
 
-                <Button
-                    android:id="@+id/btnPhr5Tab"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="18sp"
-                    android:text="Buenas noches"
-                    android:paddingTop="20dp"
-                    android:paddingBottom="20dp"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="imageClick"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="Que tengas un buen día"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </ScrollView>
 
-                <Button
-                    android:id="@+id/btnPhr6Tab"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="18sp"
-                    android:text="Que tengas un buen día"
-                    android:paddingTop="20dp"
-                    android:paddingBottom="20dp"/>
-            </LinearLayout>
-        </ScrollView>
-    </LinearLayout>
-
-    <LinearLayout
+    <HorizontalScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.50"
-        android:orientation="horizontal">
+        android:layout_weight="0.4">
 
-        <HorizontalScrollView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
 
-            <LinearLayout
-                android:layout_width="match_parent"
+            <ImageView
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:orientation="horizontal">
+                tools:background="@drawable/a" />
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    tools:background="@drawable/a" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                tools:background="@drawable/a" />
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    tools:background="@drawable/a"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                tools:background="@drawable/a" />
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    tools:background="@drawable/a" />
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    tools:background="@drawable/a"/>
-            </LinearLayout>
-        </HorizontalScrollView>
-    </LinearLayout>
-
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                tools:background="@drawable/a" />
+        </LinearLayout>
+    </HorizontalScrollView>
 </LinearLayout>
-

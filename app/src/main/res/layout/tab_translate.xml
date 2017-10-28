@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="10dp"
     android:orientation="vertical"
     tools:context="com.swing.app.hearme.TranslateActivity">
 
@@ -18,17 +19,27 @@
         android:scrollbars="vertical"
         android:gravity="top|left"/>
 
-    <Button
-        android:id="@+id/btnSpeechToText"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Voz a texto"/>
+        android:orientation="horizontal"
+        android:paddingTop="5sp"
+        android:paddingBottom="5sp">
+        <Button
+            android:id="@+id/btnTranslateOk"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.9"
+            android:text="Traducir"/>
 
-    <Button
-        android:id="@+id/btnTranslateOk"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="Traducir" />
+        <ImageButton
+            android:id="@+id/btnSpeechToText"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1"
+            android:text="" />
+    </LinearLayout>
+
 
     <HorizontalScrollView
         android:layout_width="match_parent"
