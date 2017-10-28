@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">HearMe</string>
+    <string name="basicDesc">Durante esta sección estudiaremos el alfabeto y los numeros.</string>
+    <string name="mediumDesc">Antes de que estes listo para formar frases completas, es necesario que conozcas un poco de vocabulario. En esta sección se te mostraran algunos verbos, pronombres y sustantivos. Si no encuentras alguna palabra, te invitamos a traducirla mediante nuestro traductor.</string>
+    <string name="advancedDesc">Por ultimo, en esta sección aprenderemos a formar frases sencillas. Basicamente, formar una frase consiste en juntar las señas que la conforman.</string>
+    <string name="ejemplo1">Por ejemplo, la frase \"Tengo muchos perros\" se expresaría de la siguiente manera:</string>
 </resources>

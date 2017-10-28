@@ -20,7 +20,10 @@
         </activity>
         <activity android:name=".TranslateActivity" />
         <activity android:name=".AlphabetActivity" />
-        <activity android:name=".PhrasesActivity"></activity>
+        <activity android:name=".PhrasesActivity" />
+        <activity android:name=".BasicActivity" />
+        <activity android:name=".MediumActivity" />
+        <activity android:name=".AdvancedActivity"></activity>
     </application>
 
 </manifest>

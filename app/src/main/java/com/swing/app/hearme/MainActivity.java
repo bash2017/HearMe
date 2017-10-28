@@ -4,6 +4,8 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.design.widget.TabLayout;
 import android.os.Bundle;
+
+import com.swing.app.hearme.tabs.TabAcademy;
 import com.swing.app.hearme.tabs.TabPhrases;
 import com.swing.app.hearme.tabs.TabTranslate;
 import com.swing.app.hearme.utils.SectionPageAdapter;
@@ -28,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         _sectionPageAdapter = new SectionPageAdapter(getSupportFragmentManager());
         _sectionPageAdapter.addFragment(new TabTranslate(), "Traductor");
         _sectionPageAdapter.addFragment(new TabPhrases(), "Frases Comunes");
+        _sectionPageAdapter.addFragment(new TabAcademy(), "Academia");
         viewPager.setAdapter(_sectionPageAdapter);
     }
 }
