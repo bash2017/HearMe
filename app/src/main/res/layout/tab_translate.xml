@@ -9,13 +9,15 @@
         android:id="@+id/txtTranslateText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/cab_01"
         android:hint="Yo quiero decir..."
         android:inputType="textMultiLine"
         android:lines="8"
         android:maxLines="8"
         android:minLines="8"
         android:scrollbars="vertical"
-        android:gravity="top|left"/>
+        android:gravity="top|left"
+        android:padding="7dp"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -28,14 +30,15 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.9"
-            android:text="Traducir"/>
+            android:text="Traducir"
+            android:background="@drawable/cab_01"/>
 
         <ImageButton
             android:id="@+id/btnSpeechToText"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.1"
-            android:text="" />
+            android:background="@drawable/cab_01"/>
     </LinearLayout>
 
 
@@ -43,14 +46,18 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="bottom"
-        android:background="@color/colorAccent">
+        android:background="@drawable/cab_02"
+        android:paddingBottom="5dp">
 
         <LinearLayout
             android:id="@+id/llTranslateImages"
             android:orientation="horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center">
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp">
         </LinearLayout>
     </HorizontalScrollView>
 </LinearLayout>

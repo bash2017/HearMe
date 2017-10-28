@@ -15,7 +15,8 @@
         android:id="@+id/txtCustomView"
         android:layout_width="650dp"
         android:layout_height="wrap_content"
-        android:text="dasdasdasdasdasdasdasd"
         android:gravity="center"
-        android:layout_weight="0.1"/>
+        android:layout_weight="0.1"
+        android:textSize="18sp"
+        android:textColor="@color/colorBlanco"/>
 </LinearLayout>

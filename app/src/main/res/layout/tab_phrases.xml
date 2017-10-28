@@ -4,21 +4,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="10dp"
-    android:orientation="vertical"
-    tools:context="com.swing.app.hearme.PhrasesActivity">
+    android:orientation="vertical">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Frases Típicas"
-        android:textSize="28sp"
+        android:textColor="@color/colorPrimary"
+        android:textSize="22sp"
         android:gravity="center"/>
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.4"
-        android:paddingBottom="10dp">
+        android:padding="15dp"
+        android:background="@drawable/cab_01">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -28,56 +29,67 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="imageClick"
+
                 android:paddingBottom="10dp"
                 android:paddingTop="10dp"
-                android:text="Hola, ¿Cómo estas?"
-                android:textSize="18sp" />
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/cab_03"
+                android:textColor="@color/colorBlanco"
+                android:textSize="15sp"
+                android:text="Buenos dias"
+                android:id="@+id/btnBuenosDias"/>
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="imageClick"
-                android:paddingBottom="10dp"
-                android:paddingTop="10dp"
-                android:text="Adios, nos vemos luego"
-                android:textSize="18sp" />
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:onClick="imageClick"
                 android:paddingBottom="10dp"
                 android:paddingTop="10dp"
-                android:text="¿Cómo te ha ido en el día?"
-                android:textSize="18sp" />
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:onClick="imageClick"
-                android:paddingBottom="10dp"
-                android:paddingTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/cab_03"
+                android:textColor="@color/colorBlanco"
+                android:textSize="15sp"
                 android:text="Buenas tardes"
-                android:textSize="18sp" />
+                android:id="@+id/btnBuenosTardes"/>
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="imageClick"
+
                 android:paddingBottom="10dp"
                 android:paddingTop="10dp"
-                android:text="Buenas noches"
-                android:textSize="18sp" />
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/cab_03"
+                android:textColor="@color/colorBlanco"
+                android:textSize="15sp"
+                android:text="Hola"
+                android:id="@+id/btnHola"/>
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="imageClick"
+
                 android:paddingBottom="10dp"
                 android:paddingTop="10dp"
-                android:text="Que tengas un buen día"
-                android:textSize="18sp" />
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/cab_03"
+                android:textColor="@color/colorBlanco"
+                android:textSize="15sp"
+                android:text="Adios"
+                android:id="@+id/btnAdios"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/cab_03"
+                android:textColor="@color/colorBlanco"
+                android:textSize="15sp"
+                android:text="Mucho gusto"
+                android:id="@+id/btnGusto"/>
         </LinearLayout>
     </ScrollView>
 
@@ -89,27 +101,10 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:id="@+id/llFrases">
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                tools:background="@drawable/a" />
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                tools:background="@drawable/a" />
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                tools:background="@drawable/a" />
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                tools:background="@drawable/a" />
         </LinearLayout>
     </HorizontalScrollView>
 </LinearLayout>

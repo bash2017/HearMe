@@ -68,6 +68,7 @@ public class TranslateManager {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
                         if (dataSnapshot.exists()) {
+                            int i = 1;
                             for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
                                 LayoutInflater vi = (LayoutInflater) _context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
                                 View v = vi.inflate(R.layout.scustom_view, null);
@@ -76,7 +77,7 @@ public class TranslateManager {
                                 ImageView imageView = (ImageView) v.findViewById(R.id.imgCustomView);
 
                                 Picasso.with(_context).load(String.valueOf(postSnapshot.getValue())).into(imageView);
-                                textView.setText(world);
+                                textView.setText(world + "(" + String.valueOf(i++) + ")");
                                 v.setLayoutParams(new LinearLayout.LayoutParams(
                                         650,
                                         650));

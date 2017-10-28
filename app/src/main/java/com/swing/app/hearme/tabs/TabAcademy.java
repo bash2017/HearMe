@@ -22,7 +22,7 @@ import com.swing.app.hearme.R;
 public class TabAcademy extends Fragment {
 
     private View _view;
-    ImageButton btnBasic, btnMedium, btnAdvanced;
+    Button btnBasic, btnMedium, btnAdvanced;
 
     @Nullable
     @Override
@@ -37,9 +37,9 @@ public class TabAcademy extends Fragment {
     }
 
     private void setControls(){
-        btnBasic = (ImageButton)(_view.findViewById(R.id.btnBasico));
-        btnMedium = (ImageButton)(_view.findViewById(R.id.btnMedio));
-        btnAdvanced = (ImageButton)(_view.findViewById(R.id.btnAvanzado));
+        btnBasic = (Button)(_view.findViewById(R.id.btnBasico));
+        btnMedium = (Button)(_view.findViewById(R.id.btnMedio));
+        btnAdvanced = (Button)(_view.findViewById(R.id.btnAvanzado));
     }
 
     private void setEvents(){

@@ -2,27 +2,86 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center">
+    android:gravity="center"
+    android:orientation="vertical">
 
-    <ImageButton
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.33"
-        android:background="@drawable/basico"
-        android:id="@+id/btnBasico"/>
+        android:layout_weight="0.33">
 
-    <ImageButton
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/basico" />
+
+        <Button
+            android:id="@+id/btnBasico"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Basico"
+            android:textSize="20sp"
+            android:background="@drawable/cab_03"
+            android:layout_alignParentBottom="true"
+            android:textColor="@color/colorBlanco"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:paddingRight="80dp"
+            android:paddingLeft="80dp"
+            android:gravity="center"/>
+    </RelativeLayout>
+
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.33"
-        android:background="@drawable/medio"
-        android:id="@+id/btnMedio"/>
+        android:layout_weight="0.33">
 
-    <ImageButton
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/medio" />
+
+        <Button
+            android:id="@+id/btnMedio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Medio"
+            android:textSize="20sp"
+            android:background="@drawable/cab_03"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/colorBlanco"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:paddingRight="80dp"
+            android:paddingLeft="80dp"
+            android:gravity="center"/>
+    </RelativeLayout>
+
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.33"
-        android:background="@drawable/avanzado"
-        android:id="@+id/btnAvanzado"/>
+        android:layout_weight="0.33">
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/avanzado" />
+
+        <Button
+            android:id="@+id/btnAvanzado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Avanzado"
+            android:textSize="20sp"
+            android:background="@drawable/cab_03"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:textColor="@color/colorBlanco"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:paddingRight="80dp"
+            android:paddingLeft="80dp"
+            android:gravity="center"/>
+    </RelativeLayout>
 </LinearLayout>
